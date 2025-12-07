@@ -32,7 +32,7 @@ app.post("/recipes", async (req, res) => {
 // 6
 async function getAllRecipes() {
   try {
-    const recipes = Recipe.find();
+    const recipes = await Recipe.find();
     return recipes;
   } catch (error) {
     console.log(error);
